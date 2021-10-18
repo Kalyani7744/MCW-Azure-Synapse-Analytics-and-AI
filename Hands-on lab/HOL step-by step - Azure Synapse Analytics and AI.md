@@ -1787,7 +1787,7 @@ In this exercise, you will create multiple machine learning models. You will lea
     | Save credentials with the datastore for data access  | Select yes|
     | Authentication type | SQL authentication |
     | User ID | asa.sql.admin |
-    | Password | The SQL Admin password you chose when deploying the lab resources. |
+    | Password | The SQL Admin password from the environment details page |
 
     ![The new datastore blade is shown populated with the preceding values.](media/Datastore.png "New datastore blade")
 
