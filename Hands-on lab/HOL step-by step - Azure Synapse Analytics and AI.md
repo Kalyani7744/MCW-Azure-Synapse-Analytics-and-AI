@@ -1957,7 +1957,7 @@ Setting importance in Synapse SQL for Azure Synapse allows you to influence the 
 
 2. From the **Develop** menu, select the + button and choose **SQL Script** from the context menu.
 
-    ![The SQL script context menu item is highlighted.](media/synapse-studio-new-sql-script.png "New SQL script")
+    ![The SQL script context menu item is highlighted.](media/SQL-script.png "New SQL script")
 
 3. In the toolbar menu, connect to the **SQL Pool** database to execute the query.
 
@@ -2061,7 +2061,7 @@ Users should avoid a workload management solution that configures 100% workload 
 
 2. From the **Develop** menu, select the + button and choose **SQL Script** from the context menu.
 
-    ![The SQL script context menu item is highlighted.](media/synapse-studio-new-sql-script.png "New SQL script")
+    ![The SQL script context menu item is highlighted.](media/SQL-script.png "New SQL script")
 
 3. In the toolbar menu, connect to the **SQL Pool** database to execute the query.
 
@@ -2176,7 +2176,7 @@ All logins to your data warehouse are logged to `sys.dm_pdw_exec_sessions`. This
 
 2. From the **Develop** menu, select the + button and choose **SQL Script** from the context menu.
 
-    ![The SQL script context menu item is highlighted.](media/synapse-studio-new-sql-script.png "New SQL script")
+    ![The SQL script context menu item is highlighted.](media/SQL-script.png "New SQL script")
 
 3. In the toolbar menu, connect to the **SQL Pool** database to execute the query.
 
