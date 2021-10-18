@@ -1834,7 +1834,7 @@ In this exercise, you will create multiple machine learning models. You will lea
     |--------------|---------------|
     | Compute name |  Enter unique Compute name of your choice|
     | Virtual machine type | CPU |
-    | Virtual machine size | Search for and select Standard_DS3_v2. |
+    | Virtual machine size | Select Standard_DS3_v2. |
 
     ![The new compute instance virtual machine form is displayed populated with the preceding values.](media/Cluster-create-01.png "The new compute instance virtual machine form")
 
@@ -1920,8 +1920,7 @@ In this exercise, you will create multiple machine learning models. You will lea
     | Name | productseasonalityclassifier |
     | Description | Product Seasonality Classifier. |
     | Compute type | Azure Container Instance |
-    | Enable authentication | Off |
-
+    
     ![The Deploy a model blade is shown populated with the preceding values.](media/aml_automl_deploymodelaci.png "The Deploy a model blade")
 
 9. Once deployed, the Model summary will be displayed. You can view the endpoint by selecting the **Deploy status** link.
