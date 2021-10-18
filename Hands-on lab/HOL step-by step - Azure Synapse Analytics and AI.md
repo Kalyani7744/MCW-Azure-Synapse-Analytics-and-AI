@@ -1780,8 +1780,8 @@ In this exercise, you will create multiple machine learning models. You will lea
     | New datastore (name) | sqlpool01 |
     | Datastore type | Azure SQL database |
     | Account selection method | Enter manually |
-    | Server name  | Select asaworkspace{suffix} |
-    | Database name  | Select SQLPool01 |
+    | Server name  | Enter asaworkspace{suffix} |
+    | Database name  | Enter SQLPool01 |
     | Subscription ID | Select the lab subscription. |
     | Resource group name of the storage resource  | Select Synapse-MCW |
     | Save credentials with the datastore for data access  | Select yes|
@@ -1799,33 +1799,26 @@ In this exercise, you will create multiple machine learning models. You will lea
 
     ![The basic info form is displayed populated with the preceding values.](media/createdataset_basicinfo.png "Dataset basic info form")
 
-8. On the **Datastore selection** form, select **Previously created datasource**, choose **sqlpool01** from the list and select the **Select datastore** button.
-
-    ![The Datastore selection form is displayed as described above.](media/amldatasetselectdatasource.png "The Datastore selection form")
-
-9. In the next **Datastore selection** form, enter the following **SQL query**. Then expand the **Advanced settings** and enter **100** for the **Query timeout (seconds)** value. Select **Next**:
+8. On the **Datastore selection** form, select Previously created datasource **sqlpool01** from the list and enter the following **SQL query**, check the **Skip data validation**. Then expand the **Advanced settings** and enter **100** for the **Query timeout (seconds)** value. Select **Next**:
 
     ```sql
-    SELECT P.ProductId,P.Seasonality,S.TransactionDateId,COUNT(*) as TransactionItemsCount
+    SELECT  P.ProductId,P.Seasonality,S.TransactionDateId,COUNT(*) as TransactionItemsCount
     FROM wwi_mcw.SaleSmall S
     JOIN wwi_mcw.Product P ON S.ProductId = P.ProductId
-    where TransactionDateId between 20190101 and 20191231
     GROUP BY P.ProductId ,P.Seasonality,S.TransactionDateId
     ```
 
-    ![The datastore selection form is displayed populated with the preceding query.](media/aml_dataset_datastoreselectionquery.png "Dataset query details")
+    ![The datastore selection form is displayed populated with the preceding query.](media/Datastore-selection-01.png "Dataset query details")
 
-10. The **Settings and preview** data table will be displayed after a few moments. Review this data, then select the **Next** button.
+9. The **Settings and preview**, select the **Next** button.
 
-    ![The settings and preview screen is displayed showing a table of data.](media/amlstudio_dataset_settingsandpreview.png "The Settings and Preview screen")
+    ![The settings and preview screen is displayed showing a table of data.](media/Datastore-selection-02.png "The Settings and Preview screen")
 
-11. Review the **Schema** field listing, then select **Next**.
+10. In the **Schema** blade, select **Next**.
 
-    ![The Schema screen is displayed showing a listing of columns and their types.](media/amlstudio_dataset_schema.png "The dataset Schema field listing")
+11. On the **Confirm details** screen, select **Create**.
 
-12. On the **Confirm details** screen, select **Create**.
-
-    ![The dataset Confirm details screen is displayed showing a summary of the choices from the previous steps.](media/aml_dataset_confirmdetails.png "The dataset Confirm details screen")
+    ![The dataset Confirm details screen is displayed showing a summary of the choices from the previous steps.](media/Datastore-selection-03.png "The dataset Confirm details screen")
 
 ### Task 2: Create compute infrastructure
 
@@ -1839,14 +1832,15 @@ In this exercise, you will create multiple machine learning models. You will lea
 
     | Field | Value |
     |--------------|---------------|
+    | Compute name |  Enter unique Compute name of your choice|
     | Virtual machine type | CPU |
     | Virtual machine size | Search for and select Standard_DS3_v2. |
 
-    ![The new compute instance virtual machine form is displayed populated with the preceding values.](media/aml_newcomputeform.png "The new compute instance virtual machine form")
+    ![The new compute instance virtual machine form is displayed populated with the preceding values.](media/Cluster-create-01.png "The new compute instance virtual machine form")
 
-4. On the **Configure Settings** form, enter a globally unique **Compute name** of your choice, and select **Create**.
+4. On the **Advanced Settings** form, leave all the values to default, and select **Create**.
 
-    ![The new compute instance settings form is displayed populated with a compute name](media/aml_newcomputeform_settings.png "The new compute instance settings form")
+    ![The new compute instance settings form is displayed populated with a compute name](media/Cluster-create-2.png "The new compute instance settings form")
 
 5. Select the **Compute clusters** tab, and select **Create**.
 
