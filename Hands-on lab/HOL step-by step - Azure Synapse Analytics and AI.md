@@ -284,7 +284,7 @@ The data that we will be retrieving to populate the sale table is currently stor
 
 10. In the top toolbar, select **Publish all** to publish the new dataset definitions. When prompted, select the **Publish** button to deploy the changes to the workspace.
 
-    ![The top toolbar is displayed with the Publish all button highlighted.](media/publishall_toolbarmenu.png "Publish changes")
+    ![The top toolbar is displayed with the Publish all button highlighted.](media/Publish.png "Publish changes")
 
 11. Since we want to filter on multiple sale year folders (Year=2018 and Year=2019) and copy only the 2018 and 2019 sales data, we will need to create a data flow to define the specific data that we wish to retrieve from our source dataset. To create a new data flow, start by selecting **Develop** from the left menu, and in the **Develop** blade, expand the **+** button and select **Data flow**.
 
@@ -1779,14 +1779,17 @@ In this exercise, you will create multiple machine learning models. You will lea
     |--------------|---------------|
     | New datastore (name) | sqlpool01 |
     | Datastore type | Azure SQL database |
-    | Account selection method | From Azure subscription |
+    | Account selection method | Enter manually |
+    | Server name  | Select asaworkspace{suffix} |
+    | Database name  | Select SQLPool01 |
     | Subscription ID | Select the lab subscription. |
-    | Server name / database name  | Select asaworkspace{{suffix}}/SQLPool01. |
+    | Resource group name of the storage resource  | Select Synapse-MCW |
+    | Save credentials with the datastore for data access  | Select yes|
     | Authentication type | SQL authentication |
     | User ID | asa.sql.admin |
     | Password | The SQL Admin password you chose when deploying the lab resources. |
 
-    ![The new datastore blade is shown populated with the preceding values.](media/amlstudio_sqlpooldatasource.png "New datastore blade")
+    ![The new datastore blade is shown populated with the preceding values.](media/Datastore.png "New datastore blade")
 
 6. From the left menu, select **Datasets**, and with the **Registered datasets** tab selected, expand the **+ Create dataset** button and select **From datastore**.
 
